@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>Correo plantilla</title>
+    <link rel="stylesheet" href="styles/style.css">
+  </head>
+  <body>
+    <header>
+        <div class="logo">Email</div>
+        <input type="text" class="buscador" placeholder="Search">
+        <div class="perfil"></div>
+    </header>
+
+    <div class="cuerpo">
+        <div class="opciones">
+            <div>File</div>
+            <div class="seleccionado">Home</div>
+            <div>View</div>
+            <div>Help</div>
+        </div>
+
+        <div class="barra-horizontal">
+            <div class="crear">New Mail</div>
+            <div class="eliminar">Delete</div>
+            <div class="archivar">Archive</div>
+            <div class="reportar">Report</div>
+            <div class="mover">Move to</div>
+        </div>
+
+        <nav class="menu">
+            <div class="activo">Inbox</div>
+            <div>Draft</div>
+            <div>Sents</div>
+            <div>Deleted</div>
+            <div>Archive</div>
+            <div>Spam</div>
+            <div>Folders</div>
+        </nav>
+
+        <main class="contenido">
+            <section class="lista-correos">
+                <input type="radio" name="Leido" value="Si" id="Si" checked/>
+                  <label for="Si">Read</label>
+                <input type="radio" name="Leido" value="No" id="No"/>
+                  <label for="No">Not read</label>
+
+                <div class="email-seleccionado">
+                    <div class="remitente">Ejemplo 1</div>
+                    <div class="sujeto">Titulo del correo 1</div>
+                    <div class="fecha">10:45 AM</div>
+                </div>
+                <div class="email">
+                    <div class="remitente">Ejemplo 2</div>
+                    <div class="sujeto">Titulo del correo 2</div>
+                    <div class="fecha">Yesterday</div>
+                </div>
+                <div class="email">
+                    <div class="remitente">Ejemplo 3</div>
+                    <div class="sujeto">Titulo del correo 3</div>
+                    <div class="fecha">Yesterday</div>
+                </div>
+            </section>
+
+            <section class="correo-contenido">
+                <div class="titulo">
+                    <h2>Titulo del correo 1</h2>
+                    <div class="datos">
+                        <div class="perfil"></div>
+                        <span class="personas">ejemplo1@email.com<br>to: usuario@email.com</span>
+                        <span class="fecha-completa">23 de febrero, 2026, 14:20</span>
+                    </div>
+                </div>
+                <div class="texto">
+                    <p>Buenos dias,</p>
+                    <p>Esto es un ejemplo de un mensaje por correo electronico.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+  </body>
+</html>
