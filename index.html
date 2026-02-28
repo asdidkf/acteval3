@@ -4,12 +4,17 @@
     <meta charset="utf-8">
     <title>Correo plantilla</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
-        <div class="logo">Email</div>
-        <input type="text" class="buscador" placeholder="Search">
-        <div class="perfil"></div>
+        <div>
+            Email
+            <input type="text" class="buscador" placeholder="Search">
+            Perfil
+        </div>
     </header>
 
     <div class="cuerpo">
@@ -18,18 +23,18 @@
             <div class="seleccionado">Home</div>
             <div>View</div>
             <div>Help</div>
-        </div>
+        </div><br>
 
         <div class="barra-horizontal">
             <div class="crear">New Mail</div>
             <div class="eliminar">Delete</div>
-            <div class="archivar">Archive</div>
-            <div class="reportar">Report</div>
-            <div class="mover">Move to</div>
-        </div>
+            <div>Archive</div>
+            <div>Report</div>
+            <div>Move to</div>
+        </div><br>
 
         <nav class="menu">
-            <div class="activo">Inbox</div>
+            <div class="activo"><strong>Inbox</strong></div>
             <div>Draft</div>
             <div>Sents</div>
             <div>Deleted</div>
@@ -38,13 +43,13 @@
             <div>Folders</div>
         </nav>
 
-        <main class="contenido">
+        <main>
             <section class="lista-correos">
                 <input type="radio" name="Leido" value="Si" id="Si" checked/>
                   <label for="Si">Read</label>
                 <input type="radio" name="Leido" value="No" id="No"/>
                   <label for="No">Not read</label>
-
+                
                 <div class="email-seleccionado">
                     <div class="remitente">Ejemplo 1</div>
                     <div class="sujeto">Titulo del correo 1</div>

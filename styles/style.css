@@ -1,0 +1,105 @@
+/*
+EADDFF
+
+
+
+
+*/
+
+body {
+    font-family: "Roboto", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 400;
+    background-color: #FEF7FF;
+    color: #1d1b20;
+}
+
+header {
+    font-size: 1.3rem;
+    width: 98.5%;
+    padding: 10px;
+    background-color:#6750A4;
+    color:#F3EDF7;
+    display: inline-block;
+}
+
+header input {
+    width: 350px;
+    border-radius: 5px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+
+.cuerpo {
+    padding: 10px
+}
+
+.cuerpo .opciones div {
+    padding: 15px;
+    margin-bottom: 10px;
+    display: inline;
+}
+
+.cuerpo .opciones .seleccionado {
+    border-bottom: 15px, solid, #6750A4;
+    color: #6750A4;
+}
+
+.barra-horizontal div {
+    margin: 10px;
+    padding: 10px;
+    display: inline;
+    border-radius: 16px;
+    background-color: #F3EDF7;
+}
+
+.barra-horizontal .crear {
+    border-radius: 16px;
+    background-color: #EADDFF;
+}
+
+nav {
+    float: left;
+    padding: 20px;
+    margin: 5px;
+    width: 60px;
+}
+
+nav div {
+    padding: 5px;
+}
+
+.activo {
+    padding: 10px;
+    border-radius: 16px;
+    background-color: #EADDFF;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    
+}
+
+main .lista-correos {
+    width: 350px;
+    flex-direction: column;
+    padding: 20px;
+}
+
+main .lista-correos .email{
+    padding: 10px;
+    
+}
+
+main .lista-correos .email-seleccionado{
+    padding: 10px;
+    border-left: medium, solid, #6750A4;
+    
+}
+
+main .correo-contenido {
+    flex-direction: column;
+    padding: 5px;
+}
