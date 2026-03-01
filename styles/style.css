@@ -1,55 +1,70 @@
-/*
-EADDFF
 
-
-
-
-*/
 
 body {
     font-family: "Roboto", monospace;
     font-optical-sizing: auto;
     font-style: normal;
     font-weight: 400;
-    background-color: #FEF7FF;
+    background-color: #ffffff;
     color: #1d1b20;
+    display: grid;
+    grid-template-columns: 0.5fr 0.6fr 3fr;
+    grid-template-rows: auto auto auto 1fr;
+    grid-template-areas: 
+    "header header header"
+    "opciones opciones opciones"
+    "acciones acciones acciones"
+    "nav lista-email body-email";
 }
 
 header {
     font-size: 1.3rem;
-    width: 98.5%;
     padding: 10px;
     background-color:#6750A4;
     color:#F3EDF7;
-    display: inline-block;
+    grid-area: header;
+    display: flex;
+    align-items: center;
 }
 
 header input {
     width: 350px;
     border-radius: 5px;
     margin-left: 20px;
-    margin-bottom: 5px;
 }
 
-.cuerpo {
-    padding: 10px
+header img{
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    margin-left: auto;
 }
 
-.cuerpo .opciones div {
+nav {
+    display: flex;
+    grid-area: opciones;
+}
+
+nav div {
     padding: 15px;
-    margin-bottom: 10px;
-    display: inline;
+    flex-direction: column;
+    
 }
 
-.cuerpo .opciones .seleccionado {
-    border-bottom: 15px, solid, #6750A4;
+nav div:hover {
+    border-bottom: 5px, solid, #6750A4;
     color: #6750A4;
 }
 
+.barra-horizontal {
+    display: flex;
+    grid-area: acciones;
+}
+
 .barra-horizontal div {
-    margin: 10px;
+    margin-left: 5px;
     padding: 10px;
-    display: inline;
+    flex-direction: column;
     border-radius: 16px;
     background-color: #F3EDF7;
 }
@@ -59,47 +74,138 @@ header input {
     background-color: #EADDFF;
 }
 
-nav {
-    float: left;
+aside {
     padding: 20px;
     margin: 5px;
     width: 60px;
+    grid-area: nav;
 }
 
-nav div {
-    padding: 5px;
+aside div {
+    padding: 10px;
 }
 
 .activo {
-    padding: 10px;
     border-radius: 16px;
     background-color: #EADDFF;
 }
 
-main {
-    padding: 20px;
-    display: flex;
-    
-}
-
-main .lista-correos {
+.lista-correos {
     width: 350px;
-    flex-direction: column;
+    grid-area: lista-email;
     padding: 20px;
 }
 
-main .lista-correos .email{
+.lista-correos input {
+    margin-bottom: 10px;
+}
+
+.lista-correos .email{
     padding: 10px;
+    border: 3px solid #F3EDF7;
+    border-radius: 20px;
+    margin-bottom: 1%;
+}
+
+.lista-correos .remitente {
+    font-weight: 600;
+}
+.lista-correos .fecha {
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+.lista-correos .email:hover{
+    border: 2px, solid, #6750A4;
+    border-radius: 10px;
     
 }
 
-main .lista-correos .email-seleccionado{
-    padding: 10px;
-    border-left: medium, solid, #6750A4;
+main {
+    grid-area: body-email;
+    padding: 10px 60px;
+    
     
 }
 
-main .correo-contenido {
-    flex-direction: column;
-    padding: 5px;
+main .titulo {
+    padding-top: 0px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border: 3px solid #F3EDF7;
+    border-radius: 20px;
+}
+
+main .titulo h2{
+    font-size: 2rem;
+    font-weight: 500;
+    
+}
+
+main .titulo .datos {
+    display: grid;
+    grid-template-columns: 0.2fr 3fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    "perfil personas ."
+    "perfil personas fecha";
+}
+
+main img{
+    grid-area: perfil;
+    margin-top: 9px;
+    justify-items: auto;
+    align-items: auto;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+main .titulo .datos .personas{
+    grid-area: personas;
+}
+
+main .titulo .datos .fecha-completa{
+    font-style: italic;
+    font-size: 0.8rem;
+    grid-area: fecha;
+    justify-self: end;
+}
+
+main .texto {
+    border: 3px solid #F3EDF7;
+    border-radius: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 10px 100px 20px;
+}
+
+main .texto button{
+    border: none;
+    background-color: #F3EDF7;
+    padding: 5px 15px;
+    border-radius: 15px;
+    margin-top: 10px;
+
+}
+
+@media (max-width:768px){
+    body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto 1fr;
+        grid-template-areas: 
+        "header header"
+        "opciones opciones"
+        "acciones acciones"
+        "nav lista-email"
+        "body-email body-email";
+    }
+
+    header input {
+    width: 250px;
+    border-radius: 5px;
+    margin-left: 20px;
+}
 }
